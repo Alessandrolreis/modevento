@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" >
+<title> Exclusão de Evento </title>
+  <head>
+    <link href="../static/main.css" rel= "stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Exclusão de Evento</h1>
+      <h3>Por favor insira TODOS os dados solicitados do evento.</h3>
+      <div class="message">
+        {{text | safe}}
+      </div>
+      <form action="{{url_for('deleta')}}" method="POST">
+        <input title="" placeholder="Nome do Evento" type="text" name="nome_eve" required > <br>
+        <input title="" placeholder="Código do Evento" type="text" name="codigo_eve" required > <br>
+        <input title="" placeholder="Data" type="date" name="data_eve" required  > <br>
+        <input title="" placeholder="E-mail de contato" type="e-mail" name="email_name" required  > <br>
+        <button type="submit">  Enviar </button>
+      </form>
+      <form action="/" method="get">
+        <button type="submit" >Início</button>
+      </form>
+    </div>
+  </body>
+</html>

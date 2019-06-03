@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+<title> Busca de Evento </title>
+  <head>
+    <link href="../static/main.css" rel= "stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Busca de Evento</h1>
+      <h3>Por favor insira um dado do evento.</h3>
+      <div class="message">
+        {{text | safe}}
+      </div>
+      <form action="{{url_for('busca')}}" method="POST">
+        <input title="" placeholder="Nome do Evento" type="text" name="nome_eve" > <br>
+        <input title="" placeholder="Código do Evento" type="text" name="codigo_eve"> <br>
+        <input title="" placeholder="Data" type="date" name="data_eve" > <br>
+        <input title="" placeholder="Local" type="text" name="local_eve"> <br>
+        <input title="" placeholder="Site" type="text" name="site_eve"  > <br>
+        <input title="" placeholder="Palestrante/Entidade" type="text" name="responsavel_eve" > <br>
+        <input title="" placeholder="Assunto" type="text" name="assunto_eve"  > <br>
+        <input title="" placeholder="Telefone de contato" type="text" name="telefone_eve" > <br>
+        <input title="" placeholder="E-mail de contato" type="e-mail" name="email_name" > <br>
+        <button type="submit">  Enviar </button>
+      </form>
+      <form action="/" method="get">
+        <button type="submit" >Início</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head>
+   <link href="../static/main.css" rel= "stylesheet"></head>
+   <div class="w3-container w3-center">
+     <h2>Retorno da busca dos cadastrados na plataforma</h2>
+   </div>
+
+   <body>
+      <hr/>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+      <div class="w3-responsive">
+      <table class="w3-table-all">
+         <thead>
+            <tr>
+               <th>Código do evento</th>
+               <th>Nome do evento</th>
+               <th>Data</th>
+               <th>Local</th>
+               <th>Estado</th>
+               <th>Cidade</th>
+               <th>Rua</th>
+               <th>Cep</th>
+               <th>Site</th>
+               <th>Palestrante</th>
+               <th>Assunto</th>
+               <th>Telefone</th>
+               <th>E-mail</th>
+            </tr>
+         </thead>
+
+
+         <tbody>
+           {% for Modulo_Eventos in Modulo_Eventos %}
+               <tr>
+                 <td>{{ Modulo_Eventos.codigo_evento }}</td>
+                  <td>{{ Modulo_Eventos.nome_evento }}</td>
+                  <td>{{ Modulo_Eventos.data_ }}</td>
+                  <td>{{ Modulo_Eventos.local_ }}</td>
+                  <td>{{ Modulo_Eventos.estado_ }}</td>
+                  <td>{{ Modulo_Eventos.cidade_ }}</td>
+                  <td>{{ Modulo_Eventos.rua_ }}</td>
+                  <td>{{ Modulo_Eventos.cep_}}</td>
+                  <td>{{ Modulo_Eventos.site_ }}</td>
+                  <td>{{ Modulo_Eventos.palestrante_ }}</td>
+                  <td>{{ Modulo_Eventos.assunto_ }}</td>
+                  <td>{{ Modulo_Eventos.telefone_ }}</td>
+                  <td>{{ Modulo_Eventos.email_ }}</td>
+            </tr>
+            {%endfor%}
+         </tbody>
+      </table>
+      <form action="/" method="get">
+        <button type="submit" >Início</button>
+      </form>
+   </body>
+
+</div>
+</html>
