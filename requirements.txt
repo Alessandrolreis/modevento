@@ -34,7 +34,7 @@ jupyter-core==4.4.0
 macholib==1.9
 MarkupSafe==1.0
 matplotlib==2.1.2
-mistune==0.8.3
+mistune==2.0.3
 moviepy==0.2.3.5
 mp3play==0.1.15
 mpmath==1.0.0
